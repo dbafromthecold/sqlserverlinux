@@ -157,6 +157,13 @@ Rolls back to SQL Server 2022 RTM
 
 ## Active Directory
 
+- Requires a lot of manual steps to configure
+- Is tricky to setup 
+- Troubleshooting is difficult
+- Use adutil tool
+
+<font size="5"><a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication">https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication</a></font>
+
 ---
 
 ## High availability
