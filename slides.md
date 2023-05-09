@@ -50,12 +50,9 @@ sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubunt
 sudo apt update
 
 sudo apt install -y mssql-server</code></pre>
-
----
-
-## Unattended installation
-<!-- .slide: style="text-align: left;"> -->
-
+<br>
+Unattended installation
+<br>
 <pre><code>sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='Testing1122' /opt/mssql/bin/mssql-conf -n setup</code></pre>
 
 ---
@@ -75,7 +72,7 @@ sudo apt install -y mssql-server</code></pre>
 <!-- .slide: style="text-align: left;"> -->
 
 <pre><code>sudo apt install -y mssql-server=16.0.1000.6-26</code></pre>
-<br>
+
 Installs SQL Server 2022 RTM
 
 ---
@@ -105,9 +102,6 @@ Installs SQL Server 2022 RTM
 
 ---
 
-## Service Configuration
-<!-- .slide: style="text-align: left;"> -->
-
 <p align="center">
   <img src="images/configure_sqlserver_service.png" />
 </p>
@@ -132,7 +126,7 @@ sudo apt-mark unhold mssql-server</code></pre>
 <!-- .slide: style="text-align: left;"> -->
 
 <pre><code>sudo apt install -y mssql-server=16.0.4003.1-1</code></pre>
-<br>
+
 Upgrades to SQL Server 2022 CU1
 
 ---
@@ -152,7 +146,7 @@ Upgrades to SQL Server 2022 CU1
 <pre><code data-line-numbers="1|3">sudo apt install -y mssql-server=16.0.1000.6-26 --allow-downgrades
 
 sudo systemctl start mssql-server</code></pre>
-<br>
+
 Rolls back to SQL Server 2022 RTM
 
 ---
