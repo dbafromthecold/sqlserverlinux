@@ -85,6 +85,12 @@ Installs SQL Server 2022 RTM
 
 <pre><code>/opt/mssql/bin/mssql-conf</code></pre>
 
+<pre><code>sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true</code></pre>
+
+<p align="center">
+  <img src="images/enable_sqlserver_agent.png" />
+</p>
+
 <font size="5"><a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-configure-mssql-conf">https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-configure-mssql-conf</a></font>
 
 ---
@@ -101,6 +107,10 @@ Installs SQL Server 2022 RTM
 
 ## Service Configuration
 <!-- .slide: style="text-align: left;"> -->
+
+<p align="center">
+  <img src="images/configure_sqlserver_service.png" />
+</p>
 
 
 ---
