@@ -33,7 +33,7 @@ To provide an overview of SQL Server on Linux
 <!-- .slide: style="text-align: left;"> -->
 
 <p align="center">
-  <img src="images/supported_platforms.png" />
+  <img src="images/platforms_supported.png" />
 </p>
 
 ---
