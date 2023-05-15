@@ -156,7 +156,7 @@ Rolls back to SQL Server 2022 RTM
 ---
 
 ## Active Directory
-
+<!-- .slide: style="text-align: left;"> -->
 - Requires a lot of manual steps to configure
 - Is tricky to setup 
 - Troubleshooting is difficult
