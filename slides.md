@@ -29,6 +29,12 @@ To provide an overview of SQL Server on Linux
 
 ---
 
+## How it works
+
+Info on SQLPAL - TBD
+
+---
+
 ## Supported Platforms
 <!-- .slide: style="text-align: left;"> -->
 
@@ -102,17 +108,6 @@ Installs SQL Server 2022 RTM
 
 ---
 
-<p align="center">
-  <img src="images/configure_sqlserver_service.png" />
-</p>
-
-
----
-
-# Demo
-
----
-
 ## Prevent accidental upgrade
 <!-- .slide: style="text-align: left;"> -->
 
@@ -174,7 +169,30 @@ Rolls back to SQL Server 2022 RTM
 
 ---
 
+# Containers
+
+---
+
 ## Containers
+
+"Containers wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries – anything that can be installed on a server. This guarantees that the software will always run the same, regardless of its environment."
+"Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system's capability to withstand turbulent conditions in production"<br>
+<font size="6"><a href="https://www.docker.com/what-docker ">https://www.docker.com/what-docker </a></font>
+
+---
+
+## Running a SQL Server Container
+
+<pre><code data-line-numbers="1|2|3-4|5|6">docker container run -d
+--publish 15789:1433 \
+--env ACCEPT_EULA=Y \
+--env MSSQL_SA_PASSWORD=Y \
+--name sqlcontainer1 \
+mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04</code></pre>
+
+---
+
+# Demo
 
 ---
 
