@@ -18,7 +18,7 @@ docker version
 
 
 # pull down sql server image
-docker pull mcr.microsoft.com/mssql/server:2022-CU2-ubuntu-20.04
+docker pull mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04
 
 
 
@@ -30,9 +30,9 @@ docker image ls
 # run sql server container
 docker container run -d \
 --publish 15789:1433 \
---env ACCEPT_EULA=Y
+--env ACCEPT_EULA=Y \
 --env MSSQL_SA_PASSWORD=Testing1122 \
---name sqlcontainer1
+--name sqlcontainer1 \
 mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04
 
 
@@ -78,8 +78,8 @@ docker container rm sqlcontainer1 -f
 
 
 # spin up another container with a named volume
-docker container -d \
---volume sqldata:/var/opt/mssql/data \
+docker container run -d \
+--volume sqldata:/var/opt/mssql \
 --publish 15789:1433 \
 --env ACCEPT_EULA=Y \
 --env MSSQL_SA_PASSWORD=Testing1122 \
@@ -123,14 +123,29 @@ docker container rm sqlcontainer2 -f
 
 
 
+# confirm
+docker container ls -a
+
+
+
+# confirm named volume
+docker volume ls
+
+
+
 # spin up another container reusing named volume
-docker container -d \
---volume sqldata:/var/opt/mssql/data \
+docker container run -d \
+--volume sqldata:/var/opt/mssql \
 --publish 15799:1433 \
 --env ACCEPT_EULA=Y \
 --env MSSQL_SA_PASSWORD=Testing1122 \
 --name sqlcontainer3 \
-mcr.microsoft.com/mssql/server/2022-CU3-ubuntu-20.04
+mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04
+
+
+
+# confirm container
+docker container ls -a
 
 
 
@@ -141,3 +156,8 @@ mssql-cli -S localhost,15799 -U sa -P Testing1122 -Q "SELECT [name] FROM sys.dat
 
 # remove container
 docker container rm sqlcontainer3 -f
+
+
+
+# remove volume
+docker volume prune -f

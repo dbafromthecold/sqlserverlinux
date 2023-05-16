@@ -54,17 +54,27 @@ ps aux | grep mssql
 
 
 # view mssql-conf file
-cat /var/opt/mssql/mssql.conf
+sudo cat /var/opt/mssql/mssql.conf
 
 
 
 # enable sql server agent
-/opt/mssql/bin/mssql-conf sqlagent.enabled=true
+sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
+
+
+
+# restart sql server
+sudo systemctl restart mssql-server
+
+
+
+# view mssql-conf file
+sudo cat /var/opt/mssql/mssql.conf
 
 
 
 # connect to sql server
-mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@VERSION;"
+mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@VERSION AS [Version];"
 
 
 
@@ -79,7 +89,7 @@ mssql-cli -S localhost -U sa -P Testing1122 -Q "USE [testdatabase]; EXEC sp_help
 
 
 # view files on host
-ls /var/opt/mssql/data
+sudo ls -al /var/opt/mssql/data
 
 
 
@@ -131,7 +141,7 @@ mssql-cli -S localhost -U sa -P Testing1122 -Q "EXEC sp_readerrorlog;"
 
 
 # drop BUILTIN\Administrator
-mssql-cli -S localhost -U sa -P Testing1122 -Q "DROP LOGIN [BUILTIN\Administrator];"
+mssql-cli -S localhost -U sa -P Testing1122 -Q "DROP LOGIN [BUILTIN\Administrators];"
 
 
 
