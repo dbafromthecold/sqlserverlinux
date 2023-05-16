@@ -13,7 +13,7 @@
 
 
 # confirm docker running
-docker version --client-only
+docker version
 
 
 
