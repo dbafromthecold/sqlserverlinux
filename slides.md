@@ -30,7 +30,7 @@ To provide an overview of SQL Server on Linux
 ---
 
 ## How it works
-
+<!-- .slide: style="text-align: left;"> -->
 Info on SQLPAL - TBD
 
 ---
@@ -72,10 +72,7 @@ Unattended installation
   <img src="images/sqlserver_versions.png" />
 </p>
 
----
-
-## Install specific version
-<!-- .slide: style="text-align: left;"> -->
+Install specific version
 
 <pre><code>sudo apt install -y mssql-server=16.0.1000.6-26</code></pre>
 
@@ -124,10 +121,7 @@ sudo apt-mark unhold mssql-server</code></pre>
 
 Upgrades to SQL Server 2022 CU1
 
----
-
-## After Upgrade
-<!-- .slide: style="text-align: left;"> -->
+After Upgrade
 
 <p align="center">
   <img src="images/upgrade_mode.png" />
@@ -150,18 +144,33 @@ Rolls back to SQL Server 2022 RTM
 
 ---
 
+# Further Configuration
+
+---
+
 ## Active Directory
 <!-- .slide: style="text-align: left;"> -->
-- Requires a lot of manual steps to configure
-- Is tricky to setup 
-- Troubleshooting is difficult
-- Use adutil tool
+
+Steps to perform: -
+- Join host to AD domain
+- Create AD user for SQL Server and set SPN
+- Create and secure SQL Server service keytab file
+- Configure SQL Server to use keytab file
 
 <font size="5"><a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication">https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication</a></font>
 
 ---
 
 ## High availability
+
+Three options available: -
+- Availability Groups
+- Failover Cluster Instances
+- Log shipping
+
+Mirroring is not supported
+
+<font size="5"><a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-ha-basics">https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-ha-basics</a></font>
 
 ---
 
