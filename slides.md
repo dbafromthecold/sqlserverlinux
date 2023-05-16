@@ -162,7 +162,7 @@ Steps to perform: -
 ---
 
 ## High availability
-
+<!-- .slide: style="text-align: left;"> -->
 Three options available: -
 - Availability Groups
 - Failover Cluster Instances
@@ -171,6 +171,15 @@ Three options available: -
 Mirroring is not supported
 
 <font size="5"><a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-ha-basics">https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-ha-basics</a></font>
+
+---
+
+# Pacemaker cluster
+<!-- .slide: style="text-align: left;"> -->
+
+<p align="center">
+  <img src="images/pacemaker_cluster.png" />
+</p>
 
 ---
 
