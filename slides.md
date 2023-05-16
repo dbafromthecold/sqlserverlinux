@@ -215,5 +215,13 @@ mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04</code></pre>
 ---
 
 ## Resources
+<!-- .slide: style="text-align: left;"> -->
+https://dbafromthecold.com/2021/12/01/building-a-pacemaker-cluster-to-deploy-a-sql-server-availability-group-in-azure/
+https://dbafromthecold.com/2017/01/11/killing-databases-in-sql-server-on-linux/
+https://github.com/dbafromthecold/SqlServerAndContainersGuide
 
+
+<p align="center">
+  <img src="images/sqlserverlinux_qr_code.png" />
+</p>
 
