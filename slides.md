@@ -145,6 +145,7 @@ Rolls back to SQL Server 2022 RTM
 ---
 
 # Further Configuration
+<!-- .slide: style="text-align: left;"> -->
 
 ---
 
@@ -174,7 +175,7 @@ Mirroring is not supported
 
 ---
 
-# Pacemaker cluster
+## Pacemaker cluster
 <!-- .slide: style="text-align: left;"> -->
 
 <p align="center">
@@ -192,15 +193,14 @@ Mirroring is not supported
 ---
 
 ## Containers
-
+<!-- .slide: style="text-align: left;"> -->
 "Containers wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries – anything that can be installed on a server. This guarantees that the software will always run the same, regardless of its environment."
-"Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system's capability to withstand turbulent conditions in production"<br>
 <font size="6"><a href="https://www.docker.com/what-docker ">https://www.docker.com/what-docker </a></font>
 
 ---
 
 ## Running a SQL Server Container
-
+<!-- .slide: style="text-align: left;"> -->
 <pre><code data-line-numbers="1|2|3-4|5|6">docker container run -d
 --publish 15789:1433 \
 --env ACCEPT_EULA=Y \
