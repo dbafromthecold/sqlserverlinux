@@ -17,6 +17,12 @@ sudo crm status
 
 
 
+# confirm colocation and ordering constraints
+sudo crm configure show ag-with-listener
+sudo crm configure show ag-before-listener
+
+
+
 # move availability group to another node
 sudo crm resource move ms-ag1 ap-linux-02
 
@@ -26,3 +32,45 @@ sudo crm resource move ms-ag1 ap-linux-02
 sudo crm status
 
 
+
+# view constraints in cluster
+sudo crm resource constraints ms-ag1
+
+
+
+# delete move constraint
+sudo crm configure delete cli-prefer-ms-ag1
+
+
+
+# confirm cluster status
+sudo crm status
+
+
+
+# move availability group to another node
+sudo crm resource move ms-ag1 ap-linux-03
+
+
+
+# confirm cluster status
+sudo crm status
+
+
+
+# view constraints in cluster
+sudo crm resource constraints ms-ag1
+
+
+
+# delete move constraint
+sudo crm configure delete cli-prefer-ms-ag1
+
+
+
+# view cluster status
+sudo crm status
+
+
+
+# list available stonith resources
