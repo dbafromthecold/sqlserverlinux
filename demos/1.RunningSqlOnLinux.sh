@@ -12,6 +12,11 @@
 
 
 
+# view OS information
+cat /etc/os-release 
+
+
+
 # installing sql server
 # import the GPG keys: –
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
@@ -25,6 +30,12 @@ sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubunt
 
 # update and install SQL Server: –
 sudo apt-get update && sudo apt-get install -y mssql-server
+
+
+
+# stop sql server if it is running
+systemctl status mssql-server
+systemctl stop mssql-server
 
 
 
@@ -82,6 +93,10 @@ mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@VERSION AS [Version];"
 mssql-cli -S localhost -U sa -P Testing1122 -Q "CREATE DATABASE [testdatabase];"
 
 
+# create database
+mssql-cli -S localhost -U sa -P Testing1122 -Q "select name from sys.databases;"
+
+
 
 # view database files
 mssql-cli -S localhost -U sa -P Testing1122 -Q "USE [testdatabase]; EXEC sp_helpfile;"
@@ -102,6 +117,11 @@ echo $FILE
 
 # remove file
 sudo rm $FILE
+
+
+
+# view files on host
+sudo ls -al /var/opt/mssql/data
 
 
 
@@ -150,6 +170,12 @@ mssql-cli -S localhost -U sa -P Testing1122 -Q "EXEC sp_readerrorlog;"
 
 
 
+# show error log on host
+sudo ls /var/opt/mssql/log
+sudo cat /var/opt/mssql/log/errorlog
+
+
+
 # try to recreate [BUILTIN\Administrators] login
 mssql-cli -S localhost -U sa -P Testing1122 -Q "CREATE LOGIN [BUILTIN\Administrators] FROM WINDOWS;"
 
@@ -165,7 +191,7 @@ sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
 
 
 
-# set sa password
+# set sa password - ERRORED OUT!
 sudo /opt/mssql/bin/mssql-conf set-sa-password
 
 

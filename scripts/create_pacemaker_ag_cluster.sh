@@ -247,13 +247,13 @@ GO
 # create listener resource in cluster
 sudo crm configure primitive virtualip \
 ocf:heartbeat:IPaddr2 \
-params ip=172.27.199.20
+params ip=10.0.0.15
 
 
 # create listner in AG
 ALTER AVAILABILITY GROUP [ag1] ADD LISTENER N'ap-linux-10' (
 WITH IP
-((N'172.27.199.20', N'255.255.240.0')), PORT=1433);
+((N'10.0.0.15', N'255.255.240.0')), PORT=1433);
 GO
 
 
