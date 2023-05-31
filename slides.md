@@ -201,7 +201,7 @@ Mirroring is not supported
 
 ## Running a SQL Server Container
 <!-- .slide: style="text-align: left;"> -->
-<pre><code data-line-numbers="1|2|3-4|5|6">docker container run -d
+<pre><code language="bash" data-line-numbers="1|2|3-4|5|6">docker container run -dT
 --publish 15789:1433
 --env ACCEPT_EULA=Y
 --env MSSQL_SA_PASSWORD=Testing1122
