@@ -32,6 +32,7 @@
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/markdown/markdown.esm.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script>
 			// More info about initialization & config:
@@ -41,7 +42,8 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				// plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ Markdown ]
 			});
 		</script>
 	</body>
