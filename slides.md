@@ -207,18 +207,7 @@ Mirroring is not supported
 --env MSSQL_SA_PASSWORD=Testing1122
 --name sqlcontainer1
 mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04
-</code></pre>
-
----
-
-```
-docker container run -d
---publish 15789:1433
---env ACCEPT_EULA=Y
---env MSSQL_SA_PASSWORD=Testing1122
---name sqlcontainer1
-mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04
-```
+</pre></code>
 
 ---
 
