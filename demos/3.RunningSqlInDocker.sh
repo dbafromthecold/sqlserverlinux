@@ -5,7 +5,7 @@
 # @dbafromthecold
 # dbafromthecold@gmail.com
 # https://github.com/dbafromthecold/sqlserverlinux
-# Running SQL Server on Linux
+# Running SQL Server in a Docker Container
 #
 ############################################################################
 ############################################################################

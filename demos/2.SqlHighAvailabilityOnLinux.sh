@@ -5,10 +5,15 @@
 # @dbafromthecold
 # dbafromthecold@gmail.com
 # https://github.com/dbafromthecold/sqlserverlinux
-# Running SQL Server on Linux
+# SQL Server High Availability on Linux
 #
 ############################################################################
 ############################################################################
+
+
+
+# connect to server in cluster
+ssh ap-linux-01
 
 
 

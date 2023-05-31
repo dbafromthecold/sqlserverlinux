@@ -34,8 +34,8 @@ sudo apt-get update && sudo apt-get install -y mssql-server
 
 
 # stop sql server if it is running
-systemctl status mssql-server
-systemctl stop mssql-server
+sudo systemctl status mssql-server
+sudo systemctl stop mssql-server
 
 
 
@@ -91,6 +91,7 @@ mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@VERSION AS [Version];"
 
 # create database
 mssql-cli -S localhost -U sa -P Testing1122 -Q "CREATE DATABASE [testdatabase];"
+
 
 
 # create database
@@ -150,6 +151,11 @@ mssql-cli -S localhost -U sa -P Testing1122 -Q "DROP DATABASE [testdatabase];"
 
 
 
+# delete log file
+sudo rm /var/opt/mssql/data/testdatabase_log.ldf
+
+
+
 # view logins
 mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT [name] FROM sys.syslogins WHERE sysadmin = 1"
 
@@ -191,7 +197,22 @@ sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
 
 
 
-# set sa password - ERRORED OUT!
+# start sql server
+sudo systemctl start mssql-server
+
+
+
+# try connecting to SQL Server
+mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@VERSION;"
+
+
+
+# stop sql server
+sudo systemctl stop mssql-server
+
+
+
+# set sa password - ignore error!
 sudo /opt/mssql/bin/mssql-conf set-sa-password
 
 
