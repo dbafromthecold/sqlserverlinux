@@ -1,3 +1,21 @@
+############################################################################
+############################################################################
+#
+# SQL Server on Linux - Andrew Pruski
+# @dbafromthecold
+# dbafromthecold@gmail.com
+# https://github.com/dbafromthecold/sqlserverlinux
+# Creating a pacemaker cluster for SQL Server
+#
+############################################################################
+############################################################################
+
+
+
+# Pre-requisites
+## Three servers running Ubuntu 20.04 with key-based ssh enabled
+
+
 
 # ssh into all three hosts
 ssh ap-linux-01
