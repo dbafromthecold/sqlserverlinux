@@ -194,14 +194,14 @@ Mirroring is not supported
 
 ## Containers
 <!-- .slide: style="text-align: left;"> -->
-"Containers wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries – anything that can be installed on a server. This guarantees that the software will always run the same, regardless of its environment."
+"Containers wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries, anything that can be installed on a server. This guarantees that the software will always run the same, regardless of its environment."
 <font size="6"><a href="https://www.docker.com/what-docker ">https://www.docker.com/what-docker </a></font>
 
 ---
 
 ## Running a SQL Server Container
 <!-- .slide: style="text-align: left;"> -->
-<pre><code data-line-numbers="1|2|3-4|5|6">docker container run -d
+<pre><code data-line-numbers="1|2|3-4|5|6">docker container run -d \
 --publish 15789:1433 \
 --env ACCEPT_EULA=Y \
 --env MSSQL_SA_PASSWORD=Y \
@@ -216,10 +216,9 @@ mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04</code></pre>
 
 ## Resources
 <!-- .slide: style="text-align: left;"> -->
-https://dbafromthecold.com/2021/12/01/building-a-pacemaker-cluster-to-deploy-a-sql-server-availability-group-in-azure/
-https://dbafromthecold.com/2017/01/11/killing-databases-in-sql-server-on-linux/
-https://github.com/dbafromthecold/SqlServerAndContainersGuide
-
+<font size="6"><a href="https://dbafromthecold.com/2021/12/01/building-a-pacemaker-cluster-to-deploy-a-sql-server-availability-group-in-azure/">https://dbafromthecold.com/2021/12/01/building-a-pacemaker-cluster-to-deploy-a-sql-server-availability-group-in-azure/
+<font size="6"><a href="https://dbafromthecold.com/2017/01/11/killing-databases-in-sql-server-on-linux/">https://dbafromthecold.com/2017/01/11/killing-databases-in-sql-server-on-linux/
+<font size="6"<a href="https://github.com/dbafromthecold/SqlServerAndContainersGuide">https://github.com/dbafromthecold/SqlServerAndContainersGuide
 
 <p align="center">
   <img src="images/sqlserverlinux_qr_code.png" />
