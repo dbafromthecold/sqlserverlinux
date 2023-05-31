@@ -179,7 +179,7 @@ Mirroring is not supported
 <!-- .slide: style="text-align: left;"> -->
 
 <p align="center">
-  <img src="images/pacemaker_cluster.png" />
+  <img src="images/linux_cluster_status.png" />
 </p>
 
 ---
