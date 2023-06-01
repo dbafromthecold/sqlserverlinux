@@ -38,7 +38,7 @@ The SQL Platform Abstraction Layer (SQLPAL)
 - Acts as a bridge between SQL and the OS
 - Prevented significant changes to the SQL codebase
 
-https://cloudblogs.microsoft.com/sqlserver/2016/12/16/sql-server-on-linux-how-introduction/
+<font size="5"><a href="https://cloudblogs.microsoft.com/sqlserver/2016/12/16/sql-server-on-linux-how-introduction/">https://cloudblogs.microsoft.com/sqlserver/2016/12/16/sql-server-on-linux-how-introduction/</a></font>
 
 ---
 
