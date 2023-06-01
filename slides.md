@@ -202,7 +202,7 @@ Mirroring is not supported
 ## Containers
 <!-- .slide: style="text-align: left;"> -->
 "Containers wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries, anything that can be installed on a server. This guarantees that the software will always run the same, regardless of its environment."
-<font size="6"><a href="https://www.docker.com/what-docker ">https://www.docker.com/what-docker</a></font>
+<font size="5"><a href="https://www.docker.com/what-docker ">https://www.docker.com/what-docker</a></font>
 
 ---
 
@@ -224,9 +224,7 @@ mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04
 
 ## Resources
 <!-- .slide: style="text-align: left;"> -->
-<font size="5"><a href="https://dbafromthecold.com/2021/12/01/building-a-pacemaker-cluster-to-deploy-a-sql-server-availability-group-in-azure/">https://dbafromthecold.com/2021/12/01/building-a-pacemaker-cluster-to-deploy-a-sql-server-availability-group-in-azure/</a></font></br>
-<font size="5"><a href="https://dbafromthecold.com/2017/01/11/killing-databases-in-sql-server-on-linux/">https://dbafromthecold.com/2017/01/11/killing-databases-in-sql-server-on-linux/</a></font></br>
-<font size="5"><a href="https://github.com/dbafromthecold/SqlServerAndContainersGuide">https://github.com/dbafromthecold/SqlServerAndContainersGuide</a></font>
+<font size="5"><a href="https://github.com/dbafromthecold/sqlserverlinux">https://github.com/dbafromthecold/sqlserverlinux/</a></font></br>
 
 <p align="center">
   <img src="images/sqlserverlinux_qr_code.png" />
