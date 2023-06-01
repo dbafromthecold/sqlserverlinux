@@ -60,6 +60,7 @@ sudo cat /lib/systemd/system/mssql-server.service
 
 
 # view processes
+# https://learn.microsoft.com/en-us/archive/blogs/bobsql/sql-server-on-linux-why-do-i-have-two-sql-server-processes
 ps aux | grep mssql
 
 
