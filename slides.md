@@ -224,7 +224,7 @@ mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04
 
 ## Resources
 <!-- .slide: style="text-align: left;"> -->
-<font size="5"><a href="https://github.com/dbafromthecold/sqlserverlinux">https://github.com/dbafromthecold/sqlserverlinux/</a></font></br>
+<font size="7"><a href="https://github.com/dbafromthecold/sqlserverlinux">https://github.com/dbafromthecold/sqlserverlinux/</a></font></br>
 
 <p align="center">
   <img src="images/sqlserverlinux_qr_code.png" />
