@@ -9,7 +9,7 @@ https://dbafromthecold.github.io/sqlserverlinux
 
 Resources: -
 
-<a href="https://dbafromthecold.com/2021/12/01/building-a-pacemaker-cluster-to-deploy-a-sql-server-availability-group-in-azure/">https://dbafromthecold.com/2021/12/01/building-a-pacemaker-cluster-to-deploy-a-sql-server-ag-in-azure/</a><br>
+<font><a href="https://dbafromthecold.com/2021/12/01/building-a-pacemaker-cluster-to-deploy-a-sql-server-availability-group-in-azure/">https://dbafromthecold.com/2021/12/01/building-a-pacemaker-cluster-to-deploy-a-sql-server-ag-in-azure/</a></font><br>
 https://dbafromthecold.com/2017/01/11/killing-databases-in-sql-server-on-linux/</br>
 https://github.com/dbafromthecold/SqlServerAndContainersGuide</br>
 
