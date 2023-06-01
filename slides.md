@@ -34,8 +34,8 @@ To provide an overview of SQL Server on Linux
 
 The SQL Platform Abstraction Layer (SQLPAL)
 - Introduced in SQL Server 2017
-- Combination of project drawbridge and the SQLOS
-- Acts as a bridge between SQL and the OS
+- Combination of project Drawbridge and the SQLOS
+- Acts as a bridge between SQLOS and the host OS
 - Prevented significant changes to the SQL codebase
 
 <font size="5"><a href="https://cloudblogs.microsoft.com/sqlserver/2016/12/16/sql-server-on-linux-how-introduction/">https://cloudblogs.microsoft.com/sqlserver/2016/12/16/sql-server-on-linux-how-introduction/</a></font>
