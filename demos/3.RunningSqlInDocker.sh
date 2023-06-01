@@ -47,11 +47,6 @@ docker container ls -a
 
 
 
-# view container info
-docker inspect container sqlcontainer1
-
-
-
 # view sql processes in container
 docker exec sqlcontainer1 ps aux
 
@@ -89,7 +84,7 @@ docker container run -d \
 --env ACCEPT_EULA=Y \
 --env MSSQL_SA_PASSWORD=Testing1122 \
 --name sqlcontainer2 \
-mcr.microsoft.com/mssql/server:2022-CU4-ubuntu-20.04
+mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04
 
 
 

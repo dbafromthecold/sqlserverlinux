@@ -96,7 +96,7 @@ mssql-cli -S localhost -U sa -P Testing1122 -Q "CREATE DATABASE [testdatabase];"
 
 
 # create database
-mssql-cli -S localhost -U sa -P Testing1122 -Q "select name from sys.databases;"
+mssql-cli -S localhost -U sa -P Testing1122 -Q "select [name] from sys.[databases];"
 
 
 
