@@ -95,12 +95,12 @@ mssql-cli -S localhost -U sa -P Testing1122 -Q "CREATE DATABASE [testdatabase];"
 
 
 
-# create database
+# confirm database
 mssql-cli -S localhost -U sa -P Testing1122 -Q "select [name] from sys.[databases];"
 
 
 
-# view database files
+# view database file location
 mssql-cli -S localhost -U sa -P Testing1122 -Q "USE [testdatabase]; EXEC sp_helpfile;"
 
 
@@ -154,6 +154,11 @@ mssql-cli -S localhost -U sa -P Testing1122 -Q "DROP DATABASE [testdatabase];"
 
 # delete log file
 sudo rm /var/opt/mssql/data/testdatabase_log.ldf
+
+
+
+# good explanation of what happens when deleting an open file in linux
+## https://stackoverflow.com/questions/31099347/what-happens-internally-when-deleting-an-opened-file-in-linux
 
 
 
