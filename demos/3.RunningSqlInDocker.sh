@@ -17,11 +17,6 @@ ssh ap-docker-01
 
 
 
-# confirm docker running
-docker version
-
-
-
 # pull down sql server image
 docker pull mcr.microsoft.com/mssql/server:2022-CU4-ubuntu-20.04
 
@@ -43,7 +38,7 @@ mcr.microsoft.com/mssql/server:2022-CU4-ubuntu-20.04
 
 
 # confirm container running
-docker container ls -a
+docker container ls -a --format "table {{.Names }}\t{{ .Image }}\t{{ .Status }}\t{{.Ports}}"
 
 
 
@@ -77,6 +72,11 @@ docker container rm sqlcontainer1 -f
 
 
 
+# confirm container removed
+docker container ls -a --format "table {{.Names }}\t{{ .Image }}\t{{ .Status }}\t{{.Ports}}"
+
+
+
 # spin up another container with a named volume
 docker container run -d \
 --volume sqldata:/var/opt/mssql \
@@ -94,7 +94,7 @@ docker volume ls
 
 
 # confirm container
-docker container ls -a
+docker container ls -a --format "table {{.Names }}\t{{ .Image }}\t{{ .Status }}\t{{.Ports}}"
 
 
 
@@ -124,7 +124,7 @@ docker container rm sqlcontainer2 -f
 
 
 # confirm
-docker container ls -a
+docker container ls -a --format "table {{.Names }}\t{{ .Image }}\t{{ .Status }}\t{{.Ports}}"
 
 
 
@@ -145,7 +145,7 @@ mcr.microsoft.com/mssql/server:2022-CU4-ubuntu-20.04
 
 
 # confirm container
-docker container ls -a
+docker container ls -a --format "table {{.Names }}\t{{ .Image }}\t{{ .Status }}\t{{.Ports}}"
 
 
 
