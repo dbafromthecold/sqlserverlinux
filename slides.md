@@ -2,6 +2,13 @@
 
 ---
 
+<p align="center">
+  <img src="images/croatia_sponsors.png" />
+</p>
+
+
+---
+
 ## Andrew Pruski
 
 <img src="images/apruski.jpg" style="float: right"/>
