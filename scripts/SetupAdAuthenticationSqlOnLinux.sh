@@ -14,30 +14,32 @@
 
 # create user for sql server in AD
 Import-Module ActiveDirectory
-New-ADUser sqlserverlinux -AccountPassword (Read-Host -AsSecureString "<<PASSWORD>>") -PasswordNeverExpires $true -Enabled $true
+New-ADUser sqlserverlinux -AccountPassword (Read-Host -AsSecureString "<PASSWORD>") -PasswordNeverExpires $true -Enabled $true
 
 
 
 # create SPN for sql server account
-setspn -A MSSQLSvc/<fully qualified domain name of host machine>:1433 sqlserverlinux
-setspn -A MSSQLSvc/<netbios name of the host machine>:1433 sqlserverlinux
+setspn -A MSSQLSvc/<FQDN of SQL Server>:1433 sqlserverlinux
+setspn -A MSSQLSvc/<Name of SQL Server>:1433 sqlserverlinux
 
 
 
-# check the key version number of the AD account
+# check the key version number of the AD account - this will be used in the script below <kvno>
 kinit sqlserverlinux@DOMAIN.COM
 kvno sqlserverlinux@DOMAIN.COM
-kvno MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@DOMAIN.COM
+kvno MSSQLSvc/<FQDN of SQL Server>:1433@DOMAIN.COM
 
 
 
 # add keytab entries for the SPNs - this will generate a mssql.keytab file
-ktpass /princ MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@DOMAIN.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser DOMAIN\sqlserverlinux /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
-ktpass /princ MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@DOMAIN.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser DOMAIN\sqlserverlinux /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
-ktpass /princ MSSQLSvc/<netbios name of the host machine>:<tcp port>@DOMAIN.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser DOMAIN\sqlserverlinux /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
-ktpass /princ MSSQLSvc/<netbios name of the host machine>:<tcp port>@DOMAIN.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser DOMAIN\sqlserverlinux /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
-ktpass /princ sqlserverlinux@DOMAIN.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser DOMAIN\sqlserverlinux /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
-ktpass /princ sqlserverlinux@DOMAIN.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser DOMAIN\sqlserverlinux /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
+ktpass /princ MSSQLSvc/<FQDN of SQL Server>:1433@DOMAIN.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser DOMAIN\sqlserverlinux /out mssql.keytab -setpass -setupn /kvno <kvno> /pass <PASSWORD>
+ktpass /princ MSSQLSvc/<FQDN of SQL Server>:1433@DOMAIN.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser DOMAIN\sqlserverlinux /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <kvno> /pass <PASSWORD>
+
+ktpass /princ MSSQLSvc/<Name of SQL Server>:1433@DOMAIN.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser DOMAIN\sqlserverlinux /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <kvno> /pass <PASSWORD>
+ktpass /princ MSSQLSvc/<Name of SQL Server>:1433@DOMAIN.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser DOMAIN\sqlserverlinux /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <kvno> /pass <PASSWORD>
+
+ktpass /princ sqlserverlinux@DOMAIN.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser DOMAIN\sqlserverlinux /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <kvno> /pass <PASSWORD>
+ktpass /princ sqlserverlinux@DOMAIN.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser DOMAIN\sqlserverlinux /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <kvno> /pass <PASSWORD>
 
 
 
