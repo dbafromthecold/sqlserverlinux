@@ -12,7 +12,7 @@
 
 
 
-# create user for sql server in AD
+# create user for sql server in AD (username is sqlserverlinux)
 Import-Module ActiveDirectory
 New-ADUser sqlserverlinux -AccountPassword (Read-Host -AsSecureString "<PASSWORD>") -PasswordNeverExpires $true -Enabled $true
 
