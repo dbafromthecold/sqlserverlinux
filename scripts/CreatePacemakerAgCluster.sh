@@ -265,13 +265,13 @@ GO
 # create listener resource in cluster
 sudo crm configure primitive virtualip \
 ocf:heartbeat:IPaddr2 \
-params ip=10.0.0.15
+params ip=10.0.0.75
 
 
 # create listner in AG
 ALTER AVAILABILITY GROUP [ag1] ADD LISTENER N'ap-linux-10' (
 WITH IP
-((N'10.0.0.15', N'255.255.240.0')), PORT=1433);
+((N'10.0.0.75', N'255.255.240.0')), PORT=1433);
 GO
 
 
@@ -334,8 +334,8 @@ ssh-keygen
 
 
 # copy key to other servers
-ssh-copy-id -i /root/.ssh/id_rsa.pub root@ap-linux-01
 ssh-copy-id -i /root/.ssh/id_rsa.pub root@ap-linux-02
+ssh-copy-id -i /root/.ssh/id_rsa.pub root@ap-linux-03
 
 
 
