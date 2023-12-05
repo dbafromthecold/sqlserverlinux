@@ -2,19 +2,14 @@
 
 ---
 
-<p align="center">
-  <img src="images/croatia_sponsors.png" />
-</p>
-
-
----
-
 ## Andrew Pruski
 
 <img src="images/apruski.jpg" style="float: right"/>
 
 ### Field Solutions Architect
-### Microsoft Data Platform MVP
+#### Microsoft Data Platform MVP
+#### Docker Captain
+#### VMware vLeader
 
 <!-- .slide: style="text-align: left;"> -->
 <i class="fab fa-twitter"></i><a href="https://twitter.com/dbafromthecold">  @dbafromthecold</a><br>
