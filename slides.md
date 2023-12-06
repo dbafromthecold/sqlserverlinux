@@ -48,7 +48,7 @@ The SQL Platform Abstraction Layer (SQLPAL)
 <!-- .slide: style="text-align: left;"> -->
 
 <p align="center">
-  <img src="images/platforms_supported.png" />
+  <img src="images/supported_platforms.png" />
 </p>
 
 ---
