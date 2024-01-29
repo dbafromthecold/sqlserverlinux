@@ -77,6 +77,31 @@ docker container ls -a --format "table {{.Names }}\t{{ .Image }}\t{{ .Status }}\
 
 
 
+# run another sql server container
+docker container run -d \
+--publish 15789:1433 \
+--env ACCEPT_EULA=Y \
+--env MSSQL_SA_PASSWORD=Testing1122 \
+--name sqlcontainer1 \
+mcr.microsoft.com/mssql/server:2022-CU4-ubuntu-20.04
+
+
+
+# confirm database is not there
+mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "SELECT [name] FROM sys.databases";
+
+
+
+# remove container
+docker container rm sqlcontainer1 -f
+
+
+
+# confirm container removed
+docker container ls -a --format "table {{.Names }}\t{{ .Image }}\t{{ .Status }}\t{{.Ports}}"
+
+
+
 # spin up another container with a named volume
 docker container run -d \
 --volume sqldata:/var/opt/mssql \
@@ -84,7 +109,7 @@ docker container run -d \
 --env ACCEPT_EULA=Y \
 --env MSSQL_SA_PASSWORD=Testing1122 \
 --name sqlcontainer2 \
-mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04
+mcr.microsoft.com/mssql/server:2022-CU4-ubuntu-20.04
 
 
 
