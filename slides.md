@@ -9,7 +9,7 @@
 ### Field Solutions Architect
 #### Microsoft Data Platform MVP
 #### Docker Captain
-#### VMware vLeader
+#### VMware vExpert
 
 <!-- .slide: style="text-align: left;"> -->
 <i class="fab fa-twitter"></i><a href="https://twitter.com/dbafromthecold">  @dbafromthecold</a><br>
@@ -221,6 +221,42 @@ mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04
 ---
 
 # Demo
+
+---
+
+# Chaos Engineering?
+
+---
+
+### What is Chaos Engineering?
+<!-- .slide: style="text-align: left;"> -->
+"Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system's capability to withstand turbulent conditions in production"<br>
+<font size="6"><a href="principlesofchaos.org">principlesofchaos.org</a></font>
+
+---
+
+### Netflix - Chaos Monkey
+<!-- .slide: style="text-align: left;"> -->
+<img src="images/chaosmonkey.png" style="float: right"/>
+
+"Chaos Monkey is responsible for randomly terminating instances in production to ensure that engineers implement their services to be resilient to instance failures"<br>
+<font size="6"><a href="netflix.github.io/chaosmonkey/">netflix.github.io/chaosmonkey</a></font>
+
+---
+
+### Running Experiments
+
+- Use the scientific method
+- Start as narrow as possible
+- Set up proper monitoring
+- Have a rollback plan
+- Use whatever tools you are comfortable with!
+
+---
+
+### KubeInvaders
+
+<img src="images/KubeInvaders_75.png" style="float: center"/>
 
 ---
 
