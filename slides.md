@@ -85,7 +85,7 @@ Install specific version
 
 <pre><code>sudo apt install -y mssql-server=16.0.1000.6-26</code></pre>
 
-Installs SQL Server 2022 RTM
+<font size="5">Installs SQL Server 2022 RTM</font>
 
 ---
 
@@ -128,9 +128,9 @@ sudo apt-mark unhold mssql-server</code></pre>
 
 <pre><code>sudo apt install -y mssql-server=16.0.4003.1-1</code></pre>
 
-Upgrades to SQL Server 2022 CU1
+<font size="5">Upgrades to SQL Server 2022 CU1</font>
 
-After Upgrade
+<font size="5">After Upgrade</font>
 
 <p align="center">
   <img src="images/upgrade_mode.png" />
