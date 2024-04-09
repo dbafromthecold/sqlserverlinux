@@ -128,7 +128,7 @@ sudo apt-mark unhold mssql-server</code></pre>
 
 <pre><code>sudo apt install -y mssql-server=16.0.4003.1-1</code></pre>
 
-<font size="5">Upgrades to SQL Server 2022 CU1</font>
+Upgrades to SQL Server 2022 CU1
 
 <font size="5">After Upgrade</font>
 
@@ -245,7 +245,7 @@ mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04
 ---
 
 ### Running Experiments
-
+<!-- .slide: style="text-align: left;"> -->
 - Use the scientific method
 - Start as narrow as possible
 - Set up proper monitoring
