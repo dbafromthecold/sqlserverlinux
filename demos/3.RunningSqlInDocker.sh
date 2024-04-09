@@ -18,7 +18,7 @@ ssh ap-docker-01
 
 
 # pull down sql server image
-docker pull mcr.microsoft.com/mssql/server:2022-CU4-ubuntu-20.04
+docker pull mcr.microsoft.com/mssql/server:2022-CU12-ubuntu-20.04
 
 
 
@@ -33,7 +33,7 @@ docker container run -d \
 --env ACCEPT_EULA=Y \
 --env MSSQL_SA_PASSWORD=Testing1122 \
 --name sqlcontainer1 \
-mcr.microsoft.com/mssql/server:2022-CU4-ubuntu-20.04
+mcr.microsoft.com/mssql/server:2022-CU12-ubuntu-20.04
 
 
 
@@ -83,7 +83,7 @@ docker container run -d \
 --env ACCEPT_EULA=Y \
 --env MSSQL_SA_PASSWORD=Testing1122 \
 --name sqlcontainer1 \
-mcr.microsoft.com/mssql/server:2022-CU4-ubuntu-20.04
+mcr.microsoft.com/mssql/server:2022-CU12-ubuntu-20.04
 
 
 
@@ -109,7 +109,7 @@ docker container run -d \
 --env ACCEPT_EULA=Y \
 --env MSSQL_SA_PASSWORD=Testing1122 \
 --name sqlcontainer2 \
-mcr.microsoft.com/mssql/server:2022-CU4-ubuntu-20.04
+mcr.microsoft.com/mssql/server:2022-CU12-ubuntu-20.04
 
 
 
@@ -165,7 +165,7 @@ docker container run -d \
 --env ACCEPT_EULA=Y \
 --env MSSQL_SA_PASSWORD=Testing1122 \
 --name sqlcontainer3 \
-mcr.microsoft.com/mssql/server:2022-CU4-ubuntu-20.04
+mcr.microsoft.com/mssql/server:2022-CU12-ubuntu-20.04
 
 
 
