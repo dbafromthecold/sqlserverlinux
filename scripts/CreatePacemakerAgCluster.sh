@@ -325,17 +325,23 @@ crm ra info stonith:ssh
 sudo su
 
 
+# enable root login
+sudo nano /etc/ssh/sshd_config
+# add PermitRootLogin yes
+sudo systemctl restart ssh
+
+
 #set password for root user
 passwd
 
 
-# create ssh key
+# create ssh key - do this on all servers
 ssh-keygen
 
 
-# copy key to other servers
+# copy keys to ALL other servers
+ssh-copy-id -i /root/.ssh/id_rsa.pub root@ap-linux-01
 ssh-copy-id -i /root/.ssh/id_rsa.pub root@ap-linux-02
-ssh-copy-id -i /root/.ssh/id_rsa.pub root@ap-linux-03
 
 
 
@@ -393,7 +399,7 @@ sudo crm configure show ag-before-listener
 
 
 # move availability group to another node
-sudo crm resource move ms-ag1 ap-linux-02
+sudo crm resource move ms-ag1 ap-linux-01
 
 
 

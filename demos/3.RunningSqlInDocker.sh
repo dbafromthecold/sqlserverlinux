@@ -185,4 +185,4 @@ docker container rm sqlcontainer3 -f
 
 
 # remove volume
-docker volume prune -f
+docker volume rm sqldata

@@ -13,7 +13,7 @@
 
 
 # switch context to cluster
-kubectl config use-context kubeinvadersclu1
+kubectl config use-context kubeinvaders1
 
 
 
@@ -48,7 +48,7 @@ kubectl get pods -o wide
 
 
 # scale deployment
-kubectl scale deployment demo --replicas=10
+kubectl scale deployment demo --replicas=20
 
 
 

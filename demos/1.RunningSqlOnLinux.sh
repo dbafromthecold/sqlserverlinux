@@ -2,7 +2,7 @@
 ############################################################################
 #
 # SQL Server on Linux - Andrew Pruski
-# @dbafromthecold
+# @dbafromthecold.com
 # dbafromthecold@gmail.com
 # https://github.com/dbafromthecold/sqlserverlinux
 # Running SQL Server on Linux
@@ -33,8 +33,9 @@ sudo apt-get update && sudo apt-get install -y mssql-server
 
 
 
-# stop sql server if it is running
+# check status of sql server service: –
 sudo systemctl status mssql-server
+sudo systemctl enable mssql-server
 sudo systemctl stop mssql-server
 
 
@@ -205,6 +206,11 @@ sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
 
 # start sql server
 sudo systemctl start mssql-server
+
+
+
+# confirm sql server service
+sudo systemctl status mssql-server
 
 
 
