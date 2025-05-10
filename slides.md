@@ -230,42 +230,6 @@ mcr.microsoft.com/mssql/server:2022-CU3-ubuntu-20.04
 
 ---
 
-# Chaos Engineering?
-
----
-
-### What is Chaos Engineering?
-<!-- .slide: style="text-align: left;"> -->
-"Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system's capability to withstand turbulent conditions in production"<br>
-<font size="6"><a href="principlesofchaos.org">principlesofchaos.org</a></font>
-
----
-
-### Netflix - Chaos Monkey
-<!-- .slide: style="text-align: left;"> -->
-<img src="images/chaosmonkey.png" style="float: right"/>
-
-"Chaos Monkey is responsible for randomly terminating instances in production to ensure that engineers implement their services to be resilient to instance failures"<br>
-<font size="6"><a href="netflix.github.io/chaosmonkey/">netflix.github.io/chaosmonkey</a></font>
-
----
-
-### Running Experiments
-<!-- .slide: style="text-align: left;"> -->
-- Use the scientific method
-- Start as narrow as possible
-- Set up proper monitoring
-- Have a rollback plan
-- Use whatever tools you are comfortable with!
-
----
-
-### KubeInvaders
-
-<img src="images/KubeInvaders_75.png" style="float: center"/>
-
----
-
 ## Resources
 <!-- .slide: style="text-align: left;"> -->
 <font size="7"><a href="https://github.com/dbafromthecold/sqlserverlinux">https://github.com/dbafromthecold/sqlserverlinux/</a></font></br>
