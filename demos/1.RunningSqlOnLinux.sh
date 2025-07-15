@@ -45,6 +45,7 @@ sudo /opt/mssql/bin/mssql-conf setup
 
 
 
+
 # confirm SQL Server is running: –
 systemctl is-active mssql-server
 
@@ -52,6 +53,13 @@ systemctl is-active mssql-server
 
 # view full status
 sudo systemctl status mssql-server
+
+
+
+
+# view blob data
+journalctl -u mssql-server.service -o verbose -n10
+
 
 
 
