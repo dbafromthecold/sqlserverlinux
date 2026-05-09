@@ -4,7 +4,7 @@ A comprehensive collection of scripts, demos, and resources for deploying, confi
 
 ## 📋 Overview
 
-This repository contains practical examples and automation scripts for working with SQL Server on Linux, covering everything from basic installation to advanced high availability configurations. All content is designed for hands-on learning and real-world deployment scenarios.
+This repository contains practical examples and scripts for working with SQL Server on Linux, covering everything from basic installation to advanced high availability configurations. All content is designed for hands-on learning and real-world deployment scenarios.
 
 ## 📁 Repository Structure
 
@@ -18,7 +18,7 @@ Interactive demonstration scripts that walk through various SQL Server on Linux 
 ### Scripts
 Automation and utility scripts for common SQL Server on Linux operations:
 
-- **`CreatePacemakerAgCluster.sh`** - Automated setup of a three-node Pacemaker cluster for SQL Server Availability Groups
+- **`CreatePacemakerAgCluster.sh`** - Setup of a three-node Pacemaker cluster for SQL Server Availability Groups
 - **`SetupAdAuthenticationSqlOnLinux.sh`** - Configure Active Directory authentication for SQL Server on Linux
 - **`RunningSqlwithSqlCmd.sh`** - Examples of using sqlcmd to connect and manage SQL Server instances
 - **`ManualAgFailover.sql`** - SQL scripts for manual failover operations in Availability Groups
@@ -26,7 +26,7 @@ Automation and utility scripts for common SQL Server on Linux operations:
 
 ## 🎯 Key Features Covered
 
-- **Installation & Configuration** - Automated SQL Server setup on Linux
+- **Installation & Configuration** - SQL Server setup on Linux
 - **High Availability** - Pacemaker clustering with Always On Availability Groups
 - **Container Deployments** - Docker-based SQL Server instances
 - **Authentication** - Active Directory integration and security setup
