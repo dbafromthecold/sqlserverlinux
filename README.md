@@ -3,7 +3,7 @@
 Resources for working with SQL Server on Linux
 
 
-Session slides can be found here: -
+Session slides can be found here: -</br>
 https://dbafromthecold.github.io/sqlserverlinux
 
 
